@@ -1,0 +1,37 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Styling Mobil-sida */
+
+@media only screen and (max-width: 376px) {
+
+
+    .grid-wrapper{
+
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr 2fr 2fr 2fr ;
+        grid-template-areas:
+
+        "na na"
+        "dm dm"
+        "ba ba"
+        "a1 a1"
+        "s1 s1"
+        "fo fo";
+
+    }
+
+    #navbar{
+
+
+
+
+    }
+
+
+}
