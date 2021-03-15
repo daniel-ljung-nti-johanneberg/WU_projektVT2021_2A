@@ -2,7 +2,9 @@
 
     box-sizing: border-box;
     margin: 0;
-
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style-type: none;
 
 }
 
@@ -16,30 +18,31 @@ html,body {
 
 /* Styling Mobil-sida */
 
-@media only screen and (max-width: 500px) {
+
 
     
     .grid-wrapper{
 
 
         display: grid;
-        height: 100vh;
-        width: 100vw;
+        height: 1450px;
+        width: 100%;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 4fr 2fr 2fr 2fr ;
+        grid-template-rows: 100px 300px 150px 300px 400px 200px ;
         grid-template-areas:
         
         "he na"
         "ba ba"
         "a1 a1"
         "s1 s1"
+        "pr pr"
         "fo fo";
     }
 
     #header{
         grid-area: he;
         display: flex;
-        background-color: gray;
+        background-color: rgb(39, 73, 32);
         width: 100%;
         justify-content: space-around;
         align-items: center;
@@ -61,7 +64,7 @@ html,body {
 
     #mobilmeny{
 
-        background-color: gray;    }
+        background-color: rgb(39, 73, 32);    }
 
 
     .meny-toggle {
@@ -76,7 +79,7 @@ html,body {
         z-index: 2;
         height: 100%;
         width: 100%;
-        background-color: gray;
+        background-color: rgb(39, 73, 32);
     }
 
 
@@ -119,7 +122,7 @@ html,body {
 
     .nav-links{
 
-
+        
       position: absolute;
       top: -1000px;
       left: 0;
@@ -127,7 +130,7 @@ html,body {
       justify-content: space-evenly;
       align-items: center;
     flex-direction: column;
-      background-color: white;
+      background-color: rgb(33, 65, 31);
       transition: all 0.2s;  
       height: 305px;
       width: 100%;
@@ -145,23 +148,21 @@ html,body {
         align-items: center;
     }
 
+
+
     #mobilmeny{
 
         text-decoration: none;
 
     }
 
-    .nav-links{
 
-        list-style-type: none;
-
-    }
 
     .nav-links a{
 
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         text-decoration: none;
-        color: black;
+        color: rgb(255, 255, 255);
         font-size: 20px;
     }
 
@@ -175,16 +176,188 @@ html,body {
     }
 
     #banner{
-
-        background-color: rgb(27, 112, 32);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(#0000006c, #2a5e0765),  url(/img/nature.jpg);
+        background-size: cover;
         grid-area: ba;
     }
 
 
+    article h2{
+
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    article p{
+
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    h1{
+        opacity: 0.9;
+        font-size: 45px;
+
+    }
+
+    h2{
+
+        font-size: 25px;
+
+    }
+
+    h3{
+        opacity: 0.9;
+        font-size: 22px;
+
+    }
+
+
+
+
     #article{
-        background-color: black;
+        display: flex;
+        background-color: rgb(22, 44, 20);
         grid-area: a1;
+        display: inline-block;
+        box-shadow: 0px 5px 20px rgb(22, 44, 20);
+        z-index: 3;
+    }
+
+    #section{
+
+        display: flex;
+        background-color: rgb(124, 124, 124);
+        grid-area: s1;
+        background-image: linear-gradient(#ffffff0e, #ffffff15),  url(/img/space.jpg);
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #produkt_display{
+
+        display: flex;
+        grid-area: pr;
+        background-color: rgb(22, 44, 20);
+        justify-content: center;
+        align-items: center;
 
 
     }
-}
+
+    #produkt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        width: 370px;
+        height: 350px;
+        border-radius: 50px;
+        border-bottom: 15px solid #e7cdae;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.349);
+
+    }
+
+    #produkt_bild{
+
+        
+        background-image: url(/img/tshirt.jpg);
+        background-size: cover;
+        width: 350px;
+        height: 220px;
+        
+
+    }
+
+    .buy_button{
+
+        display: flex;
+        align-items: center;
+        width: 200px;
+        height: 60px;
+        border-radius: 10px;
+        font-size: 30px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        justify-content: center;
+        color: white;
+        margin-top: 10px;
+        background-color: rgb(26, 114, 26);
+
+    }
+
+    footer{
+
+
+        grid-area: fo;
+        background-color: black;
+    }
+
+
+    #footer_meny{
+
+        display: flex;
+        justify-content: space-evenly;
+        height: 100%;
+        align-items: center;
+        font-weight: bold;
+
+    }
+    
+    
+      
+
+    /* Styling Desktop-sida */
+
+    @media only screen and (min-width: 600px) {
+
+        .grid-wrapper{
+
+
+            display: grid;
+            height: 2060px;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 60px 500px 150px 550px 500px 200px ;
+            grid-template-areas:
+            
+            "he he"
+            "na na"
+            "ba ba"
+            "a1 a1"
+            "s1 s1"
+            "pr pr"
+            "fo fo";
+        }
+
+        .nav-links{
+
+            position: static;
+            height: 50px;
+            flex-direction: row;
+        }
+
+        #fake_bar{
+
+            height: 10px;
+
+        }
+
+        h1{
+
+            font-size: 60px;
+
+        }
+
+        h3{
+
+            font-size: 50px;
+
+        }
+
+    }
