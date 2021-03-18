@@ -39,6 +39,26 @@ html,body {
         "fo fo";
     }
 
+    .grid-wrapper-tshirt{
+
+
+        display: grid;
+        height: 1400px;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 350px 350px 400px 200px ;
+        grid-template-areas:
+        
+        "he na"
+        "pi pi"
+        "if if"
+        "pr pr"
+        "fo fo";
+
+
+
+    }
+
     #header{
         grid-area: he;
         display: flex;
@@ -129,7 +149,7 @@ html,body {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-    flex-direction: column;
+        flex-direction: column;
       background-color: rgb(33, 65, 31);
       transition: all 0.2s;  
       height: 305px;
@@ -167,7 +187,11 @@ html,body {
     }
 
 
+    #pris {
 
+        color: black;
+
+    }
 
     #menu{
 
@@ -185,13 +209,13 @@ html,body {
     }
 
 
-    article h2{
+    #article_home h2{
 
         margin-top: 20px;
         text-align: center;
     }
 
-    article p{
+    #article_home p{
 
         margin-top: 20px;
         text-align: center;
@@ -218,7 +242,7 @@ html,body {
 
 
 
-    #article{
+    #article_home{
         display: flex;
         background-color: rgb(22, 44, 20);
         grid-area: a1;
@@ -227,7 +251,7 @@ html,body {
         z-index: 3;
     }
 
-    #section{
+    #section_planet{
 
         display: flex;
         background-color: rgb(124, 124, 124);
@@ -270,7 +294,7 @@ html,body {
         background-image: url(/img/tshirt.jpg);
         background-size: cover;
         width: 350px;
-        height: 220px;
+        height: 190px;
         
 
     }
@@ -286,6 +310,7 @@ html,body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         justify-content: center;
         color: white;
+        text-decoration: none;
         margin-top: 10px;
         background-color: rgb(26, 114, 26);
 
@@ -308,9 +333,44 @@ html,body {
         font-weight: bold;
 
     }
+
+    /* T-Shirt-produktsida */
     
     
-      
+    #product-images{
+        grid-area: pi;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #product-images section{
+        width: 100%;
+        height:100%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    #product-info{
+
+        grid-area: if;
+        background-color: rgb(39 73 32);
+    }
+
+    #pic1{
+        width: 330px;
+        height: 350px;
+    }
+
+    #shadow{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(36, 73, 49, 0.151);    
+    }
+
+
+    
 
     /* Styling Desktop-sida */
 
@@ -329,6 +389,25 @@ html,body {
             "he he"
             "na na"
             "ba ba"
+            "a1 a1"
+            "s1 s1"
+            "pr pr"
+            "fo fo";
+        }
+
+        .grid-wrapper-tshirt{
+
+
+            display: grid;
+            height: 2060px;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 60px 500px 150px 550px 500px 200px ;
+            grid-template-areas:
+            
+            "he he"
+            "na na"
+            "pi if"
             "a1 a1"
             "s1 s1"
             "pr pr"
@@ -356,7 +435,21 @@ html,body {
 
         h3{
 
-            font-size: 50px;
+            font-size: 45px;
+        }
+
+        p{
+
+            font-size: 20px;
+
+        }
+
+ 
+
+        #section_planet{
+
+            background-image: linear-gradient(#1111115d, #14131371),  url(/img/space.jpg); 
+            background-position: center;
 
         }
 
