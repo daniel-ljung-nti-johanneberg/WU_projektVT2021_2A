@@ -59,6 +59,22 @@ html,body {
 
     }
 
+
+    .grid-wrapper-produkter{
+
+        display: grid;
+        height: 2800px;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 2500px 200px ;
+        grid-template-areas:
+        
+        "he na"
+        "ps ps"
+        "fo fo";
+
+    }
+
     #header{
         grid-area: he;
         display: flex;
@@ -370,7 +386,50 @@ html,body {
     }
 
 
+    /* Produkter-sida */
+
+    #product-section-grid{
+        grid-area: ps;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    #produkter_rubrik{
+
+        color: rgb(27, 77, 27);
+
+    }
+
+    .product-box{
+
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(128, 128, 128, 0.171);
+        box-shadow: 5px 5px 25px rgb(0, 0, 0);
+        border-radius: 25px;
+        height: 380px;
+        width: 400px;
+    }
+
+    #produkt-1{
+
+
+        background-image: url("/img/tshirt.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
     
+
+
 
     /* Styling Desktop-sida */
 
@@ -412,6 +471,47 @@ html,body {
             "s1 s1"
             "pr pr"
             "fo fo";
+        }
+
+        #product-section-grid{
+
+            display: grid;
+            height: 1500;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows:  1fr 1fr;
+            grid-template-areas:
+            
+            "p1 p2";
+
+        }
+
+        .grid-wrapper-produkter{
+
+
+            display: grid;
+            height: 1860px;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 60px 1500px 200px ;
+            grid-template-areas:
+            
+            "he he"
+            "na na"
+            "p1 p2"
+            "fo fo";
+        }
+
+        #product-section-1{
+
+            grid-area: p1;
+
+        }
+
+        #product-section-2{
+
+            grid-area: p2;
+
         }
 
         .nav-links{
