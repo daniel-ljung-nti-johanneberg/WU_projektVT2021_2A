@@ -43,38 +43,35 @@ html,body {
 
 
         display: grid;
-        height: 1700px;
+        height: 1400px;
         width: 100%;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 350px 350px 300px 400px 200px ;
+        grid-template-rows: 100px 350px 350px 400px 200px ;
         grid-template-areas:
         
         "he na"
         "pi pi"
         "if if"
-        "ik ik"
-        "gi gi"
+        "pr pr"
         "fo fo";
 
 
 
     }
 
-    .grid-wrapper-tshirt{
 
+    .grid-wrapper-produkter{
 
         display: grid;
-        height: 800px;
+        height: 2800px;
         width: 100%;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 500px 200px ;
+        grid-template-rows: 100px 2500px 200px ;
         grid-template-areas:
         
         "he na"
-        "pm pm"
+        "ps ps"
         "fo fo";
-
-
 
     }
 
@@ -371,132 +368,68 @@ html,body {
     }
 
     #product-info{
+
         grid-area: if;
         background-color: rgb(39 73 32);
-    }
-
-    #text-holder{
-
-        width: 100%;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-
-    #text-holder-gift{
-
-        width: 100%;
-        height: 300px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .pris{
-
-        color: rgb(59, 182, 100);
-
-    }
-
-    #description{
-        margin-top: 30px;
-        margin-left: 30px;
-        margin-right: 30px;
-        text-align: center;
     }
 
     #pic1{
         width: 330px;
         height: 350px;
     }
-    
 
     #shadow{
-
         position: absolute;
         width: 100%;
         height: 100%;
         background-color: rgba(36, 73, 49, 0.151);    
     }
 
-    
-    .kolumn {
 
+    /* Produkter-sida */
+
+    #product-section-grid{
+        grid-area: ps;
+        display: flex;
+        height: 100%;
         width: 100%;
+        justify-content: space-evenly;
         align-items: center;
-        text-align: center;
-        display: flex;
         flex-direction: column;
-
 
     }
 
-    #ikoner{
-        width: 100%;
-        display: flex;
+    #produkter_rubrik{
+
+        color: rgb(27, 77, 27);
+
     }
 
-    #process{
+    .product-box{
 
-        grid-area: ik;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        background-color: rgba(125, 185, 117, 0.479);
+        background-color: rgba(128, 128, 128, 0.171);
+        box-shadow: 5px 5px 25px rgb(0, 0, 0);
+        border-radius: 25px;
+        height: 380px;
+        width: 400px;
     }
 
-    #process h2{
-
-        color: rgba(44, 44, 44, 0.973);
-        margin-bottom: 30px;
-    }
+    #produkt-1{
 
 
-    #process p{
-        font-weight: bold;
-        color: rgb(54, 54, 54);
-    }
-    
-    
-    .kolumn img{
-
-        display: inline;
-        width: 80px;
-
-    }
-
-
-
-    #giftcard{
-
-        grid-area: gi;
-        background-image: url(/img/presentkort_front.jpg);
+        background-image: url("/img/tshirt.jpg");
         background-size: cover;
-    }
-
-
-    /* Presentkorts-sida */
-
-    #presentkort_main{
-        grid-area: pm;
-        background-color: rgb(77, 136, 77);
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #presentkort_main img{
-
-        width: 200px;
-        height: 200px;
+        background-repeat: no-repeat;
 
     }
+
+    
+
+
 
     /* Styling Desktop-sida */
 
@@ -525,29 +458,61 @@ html,body {
 
 
             display: grid;
-            height: 1560px;
+            height: 2060px;
             width: 100%;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 100px 60px 500px 300px 400px 200px ;
+            grid-template-rows: 100px 60px 500px 150px 550px 500px 200px ;
             grid-template-areas:
             
             "he he"
             "na na"
             "pi if"
-            "ik ik"
-            "gi gi"
+            "a1 a1"
+            "s1 s1"
+            "pr pr"
             "fo fo";
         }
 
-    
+        #product-section-grid{
 
-
-        #pic1{
-
-            margin-top: 55px;
+            display: grid;
+            height: 1500;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows:  1fr 1fr;
+            grid-template-areas:
+            
+            "p1 p2";
 
         }
 
+        .grid-wrapper-produkter{
+
+
+            display: grid;
+            height: 1860px;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 60px 1500px 200px ;
+            grid-template-areas:
+            
+            "he he"
+            "na na"
+            "p1 p2"
+            "fo fo";
+        }
+
+        #product-section-1{
+
+            grid-area: p1;
+
+        }
+
+        #product-section-2{
+
+            grid-area: p2;
+
+        }
 
         .nav-links{
 
@@ -573,11 +538,6 @@ html,body {
             font-size: 45px;
         }
 
-        h4{
-
-            font-size: 80px;
-        }
-
         p{
 
             font-size: 20px;
@@ -592,11 +552,5 @@ html,body {
             background-position: center;
 
         }
-
-
-        /* Presenkorts-sida */
-
-
-
 
     }
