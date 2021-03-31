@@ -3,10 +3,12 @@
     box-sizing: border-box;
     margin: 0;
     color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     list-style-type: none;
 
 }
+
+
 
 html,body {
     width: 100%;
@@ -17,10 +19,7 @@ html,body {
 }
 
 /* Styling Mobil-sida */
-
-
-
-    
+ 
     .grid-wrapper{
 
 
@@ -60,23 +59,40 @@ html,body {
 
     }
 
- 
-
-
     .grid-wrapper-produkter{
 
         display: grid;
-        height: 2800px;
+        height: 2950px;
         width: 100%;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 2500px 200px ;
+        grid-template-rows: 100px 150px 1250px 1250px 200px ;
         grid-template-areas:
         
         "he na"
-        "ps ps"
+        "pf pf"
+        "p1 p1"
+        "p2 p2"
         "fo fo";
 
     }
+
+    .grid-wrapper-presentkort {
+        
+        display: grid;
+        height: 1350px;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 600px 450px 200px ;
+        grid-template-areas:
+        
+        "he na"
+        "pk pk"
+        "ch ch"
+        "fo fo";
+
+        
+    }
+
 
     #header{
         grid-area: he;
@@ -90,8 +106,8 @@ html,body {
 
     .logo{
 
-        width: 150px;
-        height: 60x;
+        width: 250px;
+        height: 50px;
 
     }
 
@@ -199,7 +215,7 @@ html,body {
 
     .nav-links a{
 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-size: 20px;
@@ -228,6 +244,7 @@ html,body {
     }
 
 
+
     #article_home h2{
 
         margin-top: 20px;
@@ -241,8 +258,9 @@ html,body {
     }
 
     h1{
-        opacity: 0.9;
+        opacity: 1;
         font-size: 45px;
+     
 
     }
 
@@ -359,9 +377,10 @@ html,body {
     #product-images{
         grid-area: pi;
         background-color: rgb(255, 255, 255);
+    
     }
 
-    #product-images section{
+    #product-images #product-image{
         width: 100%;
         height:100%;
         background-color: rgb(255, 255, 255);
@@ -423,6 +442,50 @@ html,body {
         background-color: rgba(36, 73, 49, 0.151);    
     }
 
+
+
+    /* Paletter */
+
+    #palettes{
+        width: 100%;
+        display: flex;
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+    }
+
+ 
+
+    #palettes a {
+        height: 30px;
+        width: 30px;
+        box-shadow: 2px 1px 10px rgb(0, 0, 0);
+        display: block;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+
+    }
+
+
+    #green{
+
+        background-color: rgb(12, 87, 21);
+
+    }
+
+    #blue {
+
+        background-color: rgb(8, 66, 141);
+
+    }
+
+    #red{
+
+        background-color: rgb(235, 13, 13);
+
+    }
+
     
     .kolumn {
 
@@ -466,20 +529,38 @@ html,body {
 
     /* Produkter-sida */
 
-    #product-section-grid{
-        grid-area: ps;
-        display: flex;
-        height: 100%;
-        width: 100%;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
 
-    }
 
     #produkter_rubrik{
 
         color: rgb(27, 77, 27);
+
+    }
+
+    #produkter_info{
+
+        grid-area: pf;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #product-section-1{
+
+        grid-area: p1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #product-section-2{
+
+        grid-area: p2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
 
     }
 
@@ -493,7 +574,7 @@ html,body {
         box-shadow: 5px 5px 25px rgb(0, 0, 0);
         border-radius: 25px;
         height: 380px;
-        width: 400px;
+        width: 355px;
     }
 
     #produkt-1{
@@ -527,7 +608,7 @@ html,body {
     /* Presentkorts-sida */
 
     #presentkort_main{
-        grid-area: pm;
+        grid-area: pk;
         background-color: rgb(77, 136, 77);
         width: 100%;
         display: flex;
@@ -539,6 +620,13 @@ html,body {
 
         width: 200px;
         height: 200px;
+
+    }
+
+    #choose {
+
+        grid-area: ch;
+        background-color: gray;
 
     }
 
@@ -585,6 +673,24 @@ html,body {
             "fo fo";
         }
 
+        .grid-wrapper-produkter{
+
+            display: grid;
+            height: 2110px;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 60px 150px 800px 800px 200px ;
+            grid-template-areas:
+            
+            "he he"
+            "na na"
+            "pf pf"
+            "p1 p2"
+            "p1 p2"
+            "fo fo";
+    
+        }
+
 
     
 
@@ -596,46 +702,6 @@ html,body {
         }
 
 
-        #product-section-grid{
-
-            display: grid;
-            height: 1500;
-            width: 100%;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows:  1fr 1fr;
-            grid-template-areas:
-            
-            "p1 p2";
-
-        }
-
-        .grid-wrapper-produkter{
-
-
-            display: grid;
-            height: 1860px;
-            width: 100%;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 100px 60px 1500px 200px ;
-            grid-template-areas:
-            
-            "he he"
-            "na na"
-            "p1 p2"
-            "fo fo";
-        }
-
-        #product-section-1{
-
-            grid-area: p1;
-
-        }
-
-        #product-section-2{
-
-            grid-area: p2;
-
-        }
 
 
         .nav-links{
@@ -674,7 +740,8 @@ html,body {
         }
 
  
-
+        /* Index-sidan */
+        
         #section_planet{
 
             background-image: linear-gradient(#1111115d, #14131371),  url(/img/space.jpg); 
@@ -682,10 +749,6 @@ html,body {
 
         }
 
-
         /* Presenkorts-sida */
-
-
-
 
     }
