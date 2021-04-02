@@ -1,3 +1,5 @@
+html{scroll-behavior:smooth}
+
 *{
 
     box-sizing: border-box;
@@ -9,6 +11,12 @@
 }
 
 
+a {
+
+    text-decoration: none;
+
+}
+
 
 html,body {
     width: 100%;
@@ -16,6 +24,7 @@ html,body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+  
 }
 
 /* Styling Mobil-sida */
@@ -79,18 +88,19 @@ html,body {
     .grid-wrapper-presentkort {
         
         display: grid;
-        height: 1350px;
+        height: 1950px;
         width: 100%;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 600px 450px 200px ;
+        grid-template-rows: 100px 600px 400px 50px 600px 200px ;
         grid-template-areas:
         
         "he na"
         "pk pk"
+        "tx tx"
+        "ti ti"
         "ch ch"
         "fo fo";
-
-        
+ 
     }
 
 
@@ -276,6 +286,12 @@ html,body {
 
     }
 
+    h4{
+        opacity: 1;
+        font-size: 20px;
+
+    }
+
 
 
 
@@ -293,7 +309,7 @@ html,body {
         display: flex;
         background-color: rgb(124, 124, 124);
         grid-area: s1;
-        background-image: linear-gradient(#ffffff0e, #ffffff15),  url(/img/space.jpg);
+        background-image: linear-gradient(#00000091, #0000006e),  url(/img/space.jpg);
         background-size: cover;
         justify-content: center;
         align-items: center;
@@ -328,7 +344,7 @@ html,body {
     #produkt_bild{
 
         
-        background-image: url(/img/tshirt.jpg);
+        background-image: url(/img/tshirt-beige.png);
         background-size: cover;
         width: 350px;
         height: 190px;
@@ -377,25 +393,32 @@ html,body {
     #product-images{
         grid-area: pi;
         background-color: rgb(255, 255, 255);
-    
+        
     }
 
     #product-images #product-image{
         width: 100%;
-        height:100%;
+        height: 100%;
         background-color: rgb(255, 255, 255);
         display: flex;
         justify-content: center;
         position: relative;
     }
 
+    #product-images #product-image img{
+        margin-top: 30px;
+        width: 250px;
+        height: 250px;
+    }
+
     #product-info{
         grid-area: if;
         background-color: rgb(39 73 32);
+        
     }
 
     #text-holder{
-
+        margin-top: 20px;
         width: 100%;
         height: 300px;
         display: flex;
@@ -413,6 +436,12 @@ html,body {
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
+    }
+
+    #text-holder-gift h2{
+
+        text-align: center;
+
     }
 
     .pris{
@@ -456,7 +485,7 @@ html,body {
 
  
 
-    #palettes a {
+    #palettes div {
         height: 30px;
         width: 30px;
         box-shadow: 2px 1px 10px rgb(0, 0, 0);
@@ -467,22 +496,41 @@ html,body {
 
     }
 
+    #color_text{
 
-    #green{
+        color:black;
+        margin-left: 10px;
+    }
+
+    .green{
 
         background-color: rgb(12, 87, 21);
 
     }
 
-    #blue {
+    .blue {
 
         background-color: rgb(8, 66, 141);
 
     }
 
-    #red{
+    .red{
 
         background-color: rgb(235, 13, 13);
+
+    }
+
+    .beige{
+        
+        background-color: rgb(249, 228, 183);
+
+    }
+
+
+
+    .invisible{
+
+        display: none;
 
     }
 
@@ -580,12 +628,38 @@ html,body {
     #produkt-1{
 
 
-        background-image: url("/img/tshirt.jpg");
+        background-image: url("/img/tshirt-beige.png");
         background-size: cover;
         background-repeat: no-repeat;
 
     }
 
+    #produkt-2{
+
+
+        background-image: url("/img/tshirt-blue.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    #produkt-3{
+
+
+        background-image: url("/img/tshirt-green.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    #produkt-4{
+
+
+        background-image: url("/img/tshirt-red.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
 
     
     .kolumn img{
@@ -595,8 +669,6 @@ html,body {
 
     }
 
-
-
     #giftcard{
 
         grid-area: gi;
@@ -605,36 +677,138 @@ html,body {
     }
 
 
+
+
+
     /* Presentkorts-sida */
 
     #presentkort_main{
         grid-area: pk;
-        background-color: rgb(77, 136, 77);
+        background-image: linear-gradient(#000000a6, #00000048), url("/img/giftcard_trees.jpg");
+        background-size: cover;
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
-    #presentkort_main img{
 
-        width: 200px;
-        height: 200px;
+    #rubrik_present{
+
+
+        font-size: 40px;
+        margin-bottom: 20px;
+
+    }
+
+    #text_present{
+
+        text-align: center;
+
+    }
+
+    #present_link{
+
+        margin-top: 40px;
+
+    }
+
+    #present_button{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 60px;
+        border-radius: 50px;
+        background-image: linear-gradient(#245524, #2e6631);
+        box-shadow: 2px 1px 20px rgb(0, 0, 0);
+
+    }
+
+
+    #about_gift{
+
+        grid-area: tx;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #about_rubrik{
+
+        margin-top: 15px;
+        color: green;
+
+    }
+
+    #about_text{
+        line-height: 1.8;
+        text-align: center;
+        color: green;
+
+    }
+
+    #text_grid {
+
+        grid-area: ti;
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #text_grid h2{
+
+        color: green;
 
     }
 
     #choose {
 
         grid-area: ch;
-        background-color: gray;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
     }
 
+    .select_amount {
+
+        background-image: linear-gradient(#5b775b, #2e6631);
+        width: 250px;
+        height: 100px;
+        border-radius: 30px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 10px rgb(0, 0, 0);
+
+
+    }
+
+    #choose h2{
+
+        color: green;
+
+    }
+
+    
+
+    
 
 
     /* Styling Desktop-sida */
 
-    @media only screen and (min-width: 600px) {
+    
+
+    @media only screen and (min-width: 750px) {
 
         .grid-wrapper{
 
@@ -691,6 +865,24 @@ html,body {
     
         }
 
+        .grid-wrapper-presentkort {
+        
+            display: grid;
+            height: 1820px;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 60px 600px 400px 60px 400px 200px ;
+            grid-template-areas:
+            
+            "he he"
+            "na na"
+            "pk pk"
+            "tx tx"
+            "ti ti"
+            "ch ch"
+            "fo fo";
+     
+        }
 
     
 
@@ -719,18 +911,18 @@ html,body {
 
         h1{
 
-            font-size: 60px;
+            font-size: 55px;
 
         }
 
         h3{
 
-            font-size: 45px;
+            font-size: 50px;
         }
 
         h4{
 
-            font-size: 80px;
+            font-size: 45px;
         }
 
         p{
@@ -744,11 +936,45 @@ html,body {
         
         #section_planet{
 
-            background-image: linear-gradient(#1111115d, #14131371),  url(/img/space.jpg); 
+            background-image: linear-gradient(#11111181, #14131371),  url(/img/space.jpg); 
             background-position: center;
 
         }
 
+        /* T-Shirt-sida */
+
+        #product-images #product-image img{
+
+            width: 400px;
+            height: 400px;
+        }
+
         /* Presenkorts-sida */
+
+
+        #text_present{
+
+            font-size: 25px;
+
+        }
+
+
+        #about_text{
+
+            margin-left: 20%;
+            margin-right: 20%;
+
+        }
+
+
+        #choose{
+
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+      
 
     }
