@@ -1,4 +1,4 @@
-html{scroll-behavior:smooth}
+
 
 *{
 
@@ -7,8 +7,11 @@ html{scroll-behavior:smooth}
     color: white;
     font-family: 'Montserrat', sans-serif;
     list-style-type: none;
+    padding: 0px;
 
 }
+
+
 
 
 a {
@@ -18,12 +21,14 @@ a {
 }
 
 
+
 html,body {
     width: 100%;
     height: 100%;
     margin: 0px;
-    padding: 0px;
+    padding: 0;
     overflow-x: hidden;
+    scroll-behavior:smooth
   
 }
 
@@ -43,7 +48,7 @@ html,body {
         "ba ba"
         "a1 a1"
         "s1 s1"
-        "pr pr"
+        "os os"
         "fo fo";
     }
 
@@ -101,6 +106,23 @@ html,body {
         "ch ch"
         "fo fo";
  
+    }
+
+    .grid-wrapper-kontakt{
+
+        
+        display: grid;
+        height: 1200px;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 300px 600px 200px;
+        grid-template-areas:
+        
+        "he na"
+        "co co"
+        "cf cf"
+        "fo fo";
+
     }
 
 
@@ -221,7 +243,19 @@ html,body {
 
     }
 
+    .nav-links li{
 
+        transition-duration: 300ms;
+        transition-property: opacity;
+
+
+    }
+
+
+    .nav-links li:hover {
+        opacity: 0.4;
+    }
+    
 
     .nav-links a{
 
@@ -229,6 +263,7 @@ html,body {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-size: 20px;
+        font-weight: 600;
     }
 
 
@@ -248,7 +283,7 @@ html,body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(#0000006c, #2a5e0765),  url(/img/nature.jpg);
+        background-image: linear-gradient(#0000006c, #2a5e0765),  url(../img/nature.jpg);
         background-size: cover;
         grid-area: ba;
     }
@@ -309,42 +344,46 @@ html,body {
         display: flex;
         background-color: rgb(124, 124, 124);
         grid-area: s1;
-        background-image: linear-gradient(#00000091, #0000006e),  url(/img/space.jpg);
+        background-image: linear-gradient(#00000091, #0000006e),  url(../img/space.jpg);
         background-size: cover;
         justify-content: center;
         align-items: center;
     }
 
 
-    #produkt_display{
+    #om_oss{
 
-        display: flex;
-        grid-area: pr;
+        grid-area: os;
         background-color: rgb(22, 44, 20);
+        display: flex;
         justify-content: center;
         align-items: center;
-
 
     }
 
-    #produkt{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #FFFFFF;
-        width: 370px;
-        height: 350px;
-        border-radius: 50px;
-        border-bottom: 15px solid #e7cdae;
-        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.349);
+    #textsection{
+       
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       width: 100%;
+       height: 100%;
+      
+       margin-right:20%;
+       margin-left:20%;
+       
 
+    }
+
+    #textsection h2{
+        margin-bottom: 60px;
     }
 
     #produkt_bild{
 
         
-        background-image: url(/img/tshirt-beige.png);
+        background-image: url(../img/tshirt-beige.png);
         background-size: cover;
         width: 350px;
         height: 190px;
@@ -360,13 +399,19 @@ html,body {
         height: 60px;
         border-radius: 10px;
         font-size: 30px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 550;
         justify-content: center;
         color: white;
         text-decoration: none;
         margin-top: 10px;
         background-color: rgb(26, 114, 26);
+        transition-duration: 300ms;
+        transition-property: opacity;
+        cursor: pointer;
+    }
 
+    .buy_button:hover {
+        opacity: 0.8;
     }
 
     footer{
@@ -628,7 +673,7 @@ html,body {
     #produkt-1{
 
 
-        background-image: url("/img/tshirt-beige.png");
+        background-image: url(../img/tshirt-beige.png);
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -637,7 +682,7 @@ html,body {
     #produkt-2{
 
 
-        background-image: url("/img/tshirt-blue.png");
+        background-image: url(../img/tshirt-blue.png);
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -646,7 +691,7 @@ html,body {
     #produkt-3{
 
 
-        background-image: url("/img/tshirt-green.png");
+        background-image: url(../img/tshirt-green.png);
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -655,11 +700,31 @@ html,body {
     #produkt-4{
 
 
-        background-image: url("/img/tshirt-red.png");
+        background-image: url(../img/tshirt-red.png);
         background-size: cover;
         background-repeat: no-repeat;
 
     }
+
+    #produkt-5{
+
+
+        background-image: url(../img/tshirt-yellow.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+
+    #produkt-6{
+
+
+        background-image: url(../img/tshirt-gray.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
 
     
     .kolumn img{
@@ -672,12 +737,10 @@ html,body {
     #giftcard{
 
         grid-area: gi;
-        background-image: url(/img/presentkort_front.jpg);
+        background-image: url(../img/presentkort_front.jpg);
+        background-position: center;
         background-size: cover;
     }
-
-
-
 
 
     /* Presentkorts-sida */
@@ -789,7 +852,16 @@ html,body {
         justify-content: center;
         align-items: center;
         box-shadow: 1px 1px 10px rgb(0, 0, 0);
+        transition-duration: 300ms;
+        transition-property: opacity;
+        cursor: pointer;
 
+
+    }
+
+    .select_amount:hover{
+
+        opacity: 0.8;
 
     }
 
@@ -799,10 +871,147 @@ html,body {
 
     }
 
+
+
+    /* Kontakt-sida */
+
+    #contact_info{
+
+        grid-area: co;
+        background-color: #F7F8FC;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    #contact_form{
+        grid-area: cf;
+        background-color: #F7F8FC;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    #info-holder{
+        height: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #info-holder h2{
+
+        color: rgb(8, 36, 4);
+
+    }
+
+
+
+    #info-holder h3{
+
+        color: black;
+
+    }
+
+
+    .line{
+
+        width: 70%;
+        height: 1px;
+        background-color: rgb(182, 182, 182);
+
+    }
+
+    #contact-square{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 500px;
+        box-shadow: 0px 5px 20px rgb(0, 0, 0);
+        background-color: #FFFFFF;
+        border-radius: 20px;
+
+    }
+
+    #contact-square h2{
+
+        color: rgb(8, 36, 4);
+
+    }
+
+
+    .input-box{
+        display: flex;
+        text-align: center;
+        color: black;
+        width: 200px;
+        height: 50px;
+        border-radius: 30px;
+        border-style: solid;
+        margin-bottom: 10px;
+        outline: none;
+        font-size: 15px;
+    }
+
+    #first_lastname{
+        flex-wrap: wrap;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+       
+
+    }
     
 
-    
+    #input-box-meddelande{
+        font-size: 20px;
+        display: flex;
+        text-align: center;
+        color: black;
+        width: 200px;
+        height: 100px;
+        border-radius: 30px;
+        border-style: solid;
+        justify-items: center;
+        outline: none;
 
+    }
+  
+
+    #skicka {
+
+        width: 200px;
+        height: 50px;
+        border-radius: 30px;
+        background-color: rgb(35, 104, 21);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 300ms;
+        transition-property: opacity;
+        cursor: pointer;
+    }
+
+    #skicka:hover {
+
+        opacity: 0.8;
+
+    }
+
+    #skicka h2{
+
+        color: white;
+
+    }
+
+    
 
     /* Styling Desktop-sida */
 
@@ -825,7 +1034,7 @@ html,body {
             "ba ba"
             "a1 a1"
             "s1 s1"
-            "pr pr"
+            "os os"
             "fo fo";
         }
 
@@ -884,6 +1093,25 @@ html,body {
      
         }
 
+        .grid-wrapper-kontakt{
+
+        
+            display: grid;
+            height: 1060px;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 60px 300px 400px 200px;
+            grid-template-areas:
+            
+            "he he"
+            "na na"
+            "cf co"
+            "cf co"
+            "fo fo";
+    
+        }
+    
+
     
 
 
@@ -915,9 +1143,14 @@ html,body {
 
         }
 
+        h2{
+
+            font-size: 30px;
+        }
+
         h3{
 
-            font-size: 50px;
+            font-size: 30px;
         }
 
         h4{
@@ -975,6 +1208,14 @@ html,body {
             flex-wrap: wrap;
         }
 
-      
+        /* Kontakt-sida */
+
+        #input-box-meddelande{
+
+            width: 65%;
+
+        }
+
+    
 
     }
