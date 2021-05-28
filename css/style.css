@@ -28,24 +28,33 @@ html {
 }
 .grid-wrapper-tshirt {
     display: grid;
-    height: 1700px;
+    height: 4350px;
     width: 2fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 350px 350px 300px 400px 200px;
-    grid-template-areas: "he na" "pi pi" "if if" "ik ik" "gi gi" "fo fo";
-}
-.grid-wrapper-produkter {
-    display: grid;
-    height: 3450px;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 150px 1250px 1250px 500px 200px;
-    grid-template-areas:
+    grid-template-rows: 100px 350px 350px 300px 400px 150px 1250px 1250px 200px;
+    grid-template-areas: 
     "he na"
+    "pi pi"
+    "if if"
+    "ik ik"
+    "gi gi"
     "pf pf"
     "p1 p1"
     "p2 p2"
+    "fo fo";
+}
+.grid-wrapper-om-oss {
+    display: grid;
+    height: 3150px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 150px 900px 900px 900px 200px;
+    grid-template-areas:
+    "he na"
+    "pf pf"
+    "tr tr"
     "le le"
+    "hi hi"
     "fo fo";
 }
 .grid-wrapper-presentkort {
@@ -418,19 +427,32 @@ footer {
 
 #produkter_info a{
 
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 
 }
 
-#leverans {
+#leverans-artikel {
 
     grid-area: le;
     display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    
+
+}
+
+#historia-artikel {
+
+    grid-area: hi;
+    display: flex;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-
 
 }
 
@@ -466,7 +488,7 @@ footer {
     width: 355px;
 }
 
-.leverans-box {
+.artikel-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -475,27 +497,52 @@ footer {
     box-shadow: 5px 5px 25px #000;
     border-radius: 25px;
     height: 380px;
-    width: 555px;
+    width: 80vw;
 }
 
-#leverans-bild .leverans-box {
+#leverans-bild .artikel-box {
 
     background-image: url(../img/leverans.jpg);
     background-size: cover;
 
 }
 
-.leverans-box h2{
+#trad-bild .artikel-box {
+
+    background-image: url(../img/trad_artikel.jpg);
+    background-size: cover;
+
+}
+
+#earth-bild .artikel-box {
+
+    background-image: url(../img/earth_artikel.jpg);
+    background-size: cover;
+
+}
+
+.artikel-box h2{
 
     color:black
 
 }
 
-.leverans-box p {
+.artikel-box p {
     font-weight: 900;
     color: black;
     margin-top: 30px;
     width: 80%;
+
+}
+
+#trad-artikel{
+
+    grid-area: tr;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
 
 }
 
@@ -734,19 +781,19 @@ footer {
     }
     .grid-wrapper-tshirt {
         display: grid;
-        height: 1560px;
+        height: 3310px;
         width: 2fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 60px 500px 300px 400px 200px;
-        grid-template-areas: "he he" "na na" "pi if" "ik ik" "gi gi" "fo fo";
+        grid-template-rows: 100px 60px 500px 300px 400px 150px 800px 800px 200px;
+        grid-template-areas: "he he" "na na" "pi if" "ik ik" "gi gi" "pf pf" "p1 p2" "p1 p2" "fo fo";
     }
-    .grid-wrapper-produkter {
+    .grid-wrapper-om-oss {
         display: grid;
-        height: 2610px;
+        height: 2310px;
         width: 2fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 60px 150px 800px 800px 500px 200px;
-        grid-template-areas: "he he" "na na" "pf pf" "p1 p2" "p1 p2" "le le" "fo fo";
+        grid-template-rows: 100px 60px 150px 600px 600px 600px 200px;
+        grid-template-areas: "he he" "na na" "pf pf" "tr tr" "le le" "hi hi" "fo fo";
     }
     .grid-wrapper-presentkort {
         display: grid;
@@ -816,10 +863,35 @@ footer {
         width: 65%;
     }
 
-    #leverans {
+    #leverans-artikel {
 
         flex-direction: row;
 
     }
+
+    #trad-artikel {
+
+        flex-direction: row;
+
+    }
+
+    #historia-artikel {
+
+        flex-direction: row;
+
+    }
+
+    #produkter_info a{
+
+        font-size: 20px;
+        font-weight: 500;
+    
+    }
+
+    .artikel-box {
+
+        width: 555px;
+    }
+ 
 
 }
