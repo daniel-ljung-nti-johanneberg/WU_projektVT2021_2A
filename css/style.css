@@ -842,21 +842,23 @@ footer {
     #fake_bar {
         height: 10px;
     }
+    
     h1 {
         font-size: 55px;
     }
+
     h2 {
         font-size: 30px;
     }
+
     h3 {
-        font-size: 30px;
+        font-size: 25px;
     }
-    h4 {
-        font-size: 45px;
-    }
+  
     p {
         font-size: 20px;
     }
+    
     #section_planet {
         background-image: linear-gradient(#11111181, #14131371), url(/img/space.jpg);
         background-position: center;
