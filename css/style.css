@@ -29,7 +29,7 @@ html {
 .grid-wrapper-tshirt {
     display: grid;
     height: 4350px;
-    width: 2fr;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 350px 350px 300px 400px 150px 1250px 1250px 200px;
     grid-template-areas: 
@@ -43,6 +43,8 @@ html {
     "p2 p2"
     "fo fo";
 }
+
+
 .grid-wrapper-om-oss {
     display: grid;
     height: 3150px;
@@ -196,7 +198,7 @@ h1 {
     font-size: 45px;
 }
 h2 {
-    font-size: 25px;
+    font-size: 20px;
 }
 h3 {
     opacity: 0.9;
@@ -366,7 +368,7 @@ footer {
 }
 #color_text {
     color: #000;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 .green {
     background-color: #0c5715;
@@ -476,6 +478,19 @@ footer {
     justify-content: space-evenly;
     align-items: center;
 }
+
+#product-section-1 h2{
+
+    color: #1b4d1b;
+
+}
+
+#product-section-2 h2{
+
+    color: #1b4d1b;
+
+}
+
 .product-box {
     display: flex;
     flex-direction: column-reverse;
@@ -607,13 +622,12 @@ footer {
 #text_present {
     text-align: center;
 }
-#present_link {
-    margin-top: 40px;
-}
+
 #present_button {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
     width: 220px;
     height: 60px;
     border-radius: 50px;
@@ -670,9 +684,7 @@ footer {
 .select_amount:hover {
     opacity: 0.8;
 }
-#choose h2 {
-    color: green;
-}
+
 #contact_info {
     grid-area: co;
     background-color: #f7f8fc;
@@ -681,6 +693,13 @@ footer {
     justify-content: center;
     align-content: center;
 }
+
+#kontakt_rubrik{
+
+    color: black;
+    text-align: center;
+}
+
 #contact_form {
     grid-area: cf;
     background-color: #f7f8fc;
@@ -696,6 +715,7 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    
 }
 #info-holder h2 {
     color: #082404;
@@ -734,7 +754,7 @@ footer {
     outline: 0;
     font-size: 15px;
 }
-#first_lastname {
+.first_lastname {
     flex-wrap: wrap;
     display: flex;
     width: 100%;
@@ -770,7 +790,7 @@ footer {
 #skicka h2 {
     color: #fff;
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 880px) {
     .grid-wrapper {
         display: grid;
         height: 2060px;
@@ -782,7 +802,7 @@ footer {
     .grid-wrapper-tshirt {
         display: grid;
         height: 3310px;
-        width: 2fr;
+        width: 100%;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px 60px 500px 300px 400px 150px 800px 800px 200px;
         grid-template-areas: "he he" "na na" "pi if" "ik ik" "gi gi" "pf pf" "p1 p2" "p1 p2" "fo fo";
@@ -790,7 +810,7 @@ footer {
     .grid-wrapper-om-oss {
         display: grid;
         height: 2310px;
-        width: 2fr;
+        width: 100%;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px 60px 150px 600px 600px 600px 200px;
         grid-template-areas: "he he" "na na" "pf pf" "tr tr" "le le" "hi hi" "fo fo";
@@ -798,7 +818,7 @@ footer {
     .grid-wrapper-presentkort {
         display: grid;
         height: 1820px;
-        width: 2fr;
+        width: 100%;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px 60px 600px 400px 60px 400px 200px;
         grid-template-areas: "he he" "na na" "pk pk" "tx tx" "ti ti" "ch ch" "fo fo";
@@ -806,7 +826,7 @@ footer {
     .grid-wrapper-kontakt {
         display: grid;
         height: 1060px;
-        width: 2fr;
+        width: 100%;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px 60px 300px 400px 200px;
         grid-template-areas: "he he" "na na" "cf co" "cf co" "fo fo";
